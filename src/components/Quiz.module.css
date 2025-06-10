@@ -1,0 +1,129 @@
+.quizContainer {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+.question {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+  text-align: center;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.option {
+  padding: 0.75rem 1rem;
+  border: 2px solid #ccc;
+  border-radius: 0.75rem;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.option:hover {
+  background-color: #e6f0ff;
+  border-color: #007bff;
+}
+
+.selected {
+  background-color: #d0e8ff;
+  border-color: #007bff;
+  font-weight: bold;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.navigation button {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.navigation button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.navigation button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.restartBtn {
+  background-color: #007bff; /* Bootstrap primary blue */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
+}
+
+.restartBtn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.restartBtn:active {
+  transform: scale(0.97);
+  background-color: #004494;
+}
+
+@media (max-width: 480px) {
+  .restartBtn {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.65rem 1rem;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .quizContainer {
+    padding: 1.25rem;
+  }
+
+  .options {
+    gap: 0.75rem;
+  }
+
+  .option {
+    font-size: 0.95rem;
+    padding: 0.65rem 0.9rem;
+  }
+
+  .navigation button {
+    font-size: 0.95rem;
+  }
+}
